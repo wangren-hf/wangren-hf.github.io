@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>王任 | 抖音商业化操盘手 | 8年跨品类实战</title>
+<meta name="description" content="8年电商+本地生活操盘经验，跨8+品类验证。半年900万GMV从零起盘，华中第一，10万+获客，行业专著作者。">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg-page:    #F5F7FA;
+    --bg-white:   #FFFFFF;
+    --bg-blue:    #F0F5FF;
+    --accent:     #0052D9;
+    --accent-lt:  #0077FF;
+    --accent-dk:  #003CAB;
+    --text-1:     #1A1A1A;
+    --text-2:     #444444;
+    --text-3:     #888888;
+    --border:      #E5E9EF;
+    --shadow-sm:  0 2px 12px rgba(0,82,217,0.06);
+    --shadow-md:  0 8px 32px rgba(0,82,217,0.10);
+    --shadow-lg:  0 16px 48px rgba(0,82,217,0.14);
+    --radius-sm:   12px;
+    --radius-md:   20px;
+    --radius-lg:   28px;
+    --bounce:     cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans SC', 'Inter', -apple-system, sans-serif;
+    background: var(--bg-page);
+    color: var(--text-1);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed;
+    top: 16px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    padding: 10px 28px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border: 1px solid var(--border);
+    border-radius: 60px;
+    box-shadow: var(--shadow-sm);
+    width: fit-content;
+    transition: all 0.35s ease;
+  }
+
+  nav.scrolled {
+    padding: 8px 24px;
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav-logo {
+    font-size: 19px;
+    font-weight: 800;
+    color: var(--text-1);
+    letter-spacing: 2px;
+    font-family: 'Inter', sans-serif;
+    cursor: default;
+    transition: all 0.3s var(--bounce);
+  }
+  .nav-logo:hover { animation: wiggle 0.4s ease-in-out; }
+  .nav-logo span { color: var(--accent); }
+
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+
+  .nav-links a {
+    color: var(--text-3);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.25s;
+    position: relative;
+    padding: 4px 0;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-links a::after {
+    content: '';
+    position: absolute; bottom: -2px; left: 0;
+    width: 0; height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 0.3s var(--bounce);
+  }
+  .nav-links a:hover::after { width: 100%; }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 120px 40px 80px;
+    position: relative; overflow: hidden;
+    background: linear-gradient(165deg, #F0F5FF 0%, #F5F7FA 40%, #FFFFFF 100%);
+  }
+
+  .hero-deco {
+    position: absolute; font-size: 32px;
+    opacity: 0.08; pointer-events: none;
+    animation: float 5s ease-in-out infinite;
+  }
+  .hero-deco:nth-child(1) { top: 12%; left: 6%;  animation-delay: 0s; }
+  .hero-deco:nth-child(2) { top: 22%; right: 8%; animation-delay: 1.2s; font-size: 26px; }
+  .hero-deco:nth-child(3) { bottom: 18%; left: 12%; animation-delay: 2.4s; font-size: 22px; }
+  .hero-deco:nth-child(4) { bottom: 28%; right: 10%; animation-delay: 0.6s; font-size: 28px; }
+
+  .hero-content { max-width: 900px; text-align: center; position: relative; z-index: 1; }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 7px 18px;
+    background: var(--bg-blue);
+    border: 1px solid rgba(0,82,217,0.15);
+    border-radius: 50px;
+    font-size: 13px; font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 28px;
+    animation: float 3s ease-in-out infinite;
+  }
+  .hero-badge::before {
+    content: ''; width: 7px; height: 7px;
+    background: var(--accent); border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.3; transform: scale(0.7); }
+  }
+  @keyframes float {
+    0%,100% { transform: translateY(0); }
+    50%      { transform: translateY(-6px); }
+  }
+  @keyframes wiggle {
+    0%,100% { transform: rotate(0deg); }
+    25%      { transform: rotate(3deg); }
+    75%      { transform: rotate(-3deg); }
+  }
+
+  .hero h1 {
+    font-size: 56px; font-weight: 900;
+    line-height: 1.15; margin-bottom: 20px;
+    letter-spacing: -1px; color: var(--text-1);
+  }
+  .hero h1 .gradient-text {
+    background: linear-gradient(135deg, var(--accent), var(--accent-lt));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero .subtitle {
+    font-size: 17px; color: var(--text-2);
+    max-width: 640px; margin: 0 auto 36px; line-height: 1.8;
+  }
+
+  .hero-tags { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 44px; }
+
+  .hero-tag {
+    padding: 5px 14px;
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    font-size: 13px; color: var(--text-3);
+    font-weight: 500; transition: all 0.3s var(--bounce);
+  }
+  .hero-tag:hover {
+    border-color: var(--accent); color: var(--accent);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 16px rgba(0,82,217,0.10);
+  }
+
+  .hero-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 30px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-lt));
+    color: #fff; font-size: 15px; font-weight: 700;
+    border-radius: 50px; text-decoration: none;
+    transition: all 0.3s var(--bounce);
+    box-shadow: 0 4px 20px rgba(0,82,217,0.25);
+  }
+  .hero-cta:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(0,82,217,0.35);
+  }
+
+  /* ===== STATS ===== */
+  .stats {
+    padding: 72px 40px;
+    background: var(--bg-white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .stats-grid {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;
+  }
+  .stat-card {
+    text-align: center; padding: 36px 16px;
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    transition: all 0.4s var(--bounce);
+    position: relative; overflow: hidden;
+  }
+  .stat-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-lt));
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .stat-card:hover {
+    border-color: rgba(0,82,217,0.25);
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: var(--shadow-lg);
+  }
+  .stat-card:hover::before { opacity: 1; }
+
+  .stat-num {
+    font-size: 38px; font-weight: 900;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, var(--accent), var(--accent-lt));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; line-height: 1.1;
+  }
+  .stat-label { font-size: 13px; color: var(--text-3); margin-top: 8px; line-height: 1.4; }
+
+  /* ===== SECTION COMMON ===== */
+  .section { padding: 96px 40px; max-width: 1100px; margin: 0 auto; }
+
+  .section-label {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 700;
+    color: var(--accent); letter-spacing: 1.5px;
+    margin-bottom: 14px;
+  }
+  .section-label::before {
+    content: ''; width: 20px; height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-lt));
+    border-radius: 3px;
+  }
+
+  .section-title {
+    font-size: 36px; font-weight: 800;
+    margin-bottom: 14px; letter-spacing: -0.5px;
+    position: relative; display: inline-block;
+  }
+  .section-title::after {
+    content: ''; position: absolute;
+    bottom: -4px; left: 0;
+    width: 40px; height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-lt));
+    border-radius: 4px;
+  }
+
+  .section-desc {
+    font-size: 15px; color: var(--text-2);
+    max-width: 680px; margin-bottom: 48px; line-height: 1.8;
+  }
+
+  /* ===== ABOUT ===== */
+  .about-photo-wrapper {
+    width: 200px; height: 260px;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    border: 3px solid rgba(0,82,217,0.2);
+    box-shadow: 0 8px 32px rgba(0,82,217,0.18);
+    margin-bottom: 28px;
+    transition: all 0.4s var(--bounce);
+  }
+  .about-photo-wrapper:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 40px rgba(0,82,217,0.25);
+  }
+  .about-photo {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    display: block;
+  }
+
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 56px; align-items: start;
+  }
+  .about-left {
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .about-text { font-size: 15px; color: var(--text-2); line-height: 2; text-align: center; }
+  .about-text strong { color: var(--text-1); }
+
+  .about-highlights { display: flex; flex-direction: column; gap: 14px; }
+
+  .highlight-card {
+    padding: 20px 24px;
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    display: flex; align-items: flex-start; gap: 14px;
+    transition: all 0.35s var(--bounce);
+  }
+  .highlight-card:hover {
+    border-color: rgba(0,82,217,0.25);
+    transform: translateX(6px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .highlight-icon {
+    width: 44px; height: 44px;
+    background: var(--bg-blue);
+    border-radius: var(--radius-sm);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; flex-shrink: 0;
+    transition: transform 0.3s var(--bounce);
+    box-shadow: 0 2px 8px rgba(0,82,217,0.08);
+  }
+  .highlight-card:hover .highlight-icon { transform: rotate(-6deg) scale(1.1); }
+
+  .highlight-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .highlight-card p  { font-size: 13px; color: var(--text-3); line-height: 1.5; }
+
+  /* ===== TIMELINE ===== */
+  .timeline { position: relative; padding-left: 40px; }
+
+  .timeline::before {
+    content: ''; position: absolute;
+    left: 15px; top: 0; bottom: 0; width: 2px;
+    background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+    opacity: 0.25;
+  }
+
+  .timeline-item {
+    position: relative; margin-bottom: 48px;
+    padding: 28px 32px;
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: all 0.35s var(--bounce);
+  }
+  .timeline-item:hover {
+    border-color: rgba(0,82,217,0.25);
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+  }
+
+  .timeline-item::before {
+    content: ''; position: absolute;
+    left: -41px; top: 30px;
+    width: 14px; height: 14px;
+    border-radius: 50%; background: var(--bg-page);
+    border: 3px solid var(--accent);
+    z-index: 1; transition: all 0.3s var(--bounce);
+  }
+  .timeline-item:hover::before { transform: scale(1.3); box-shadow: 0 0 0 6px rgba(0,82,217,0.10); }
+  .timeline-item.current::before { background: var(--accent); box-shadow: 0 0 0 6px rgba(0,82,217,0.15); }
+
+  .timeline-header {
+    display: flex; justify-content: space-between;
+    align-items: flex-start; margin-bottom: 10px;
+    flex-wrap: wrap; gap: 8px;
+  }
+  .timeline-company { font-size: 20px; font-weight: 800; color: var(--text-1); }
+  .timeline-role  { font-size: 14px; color: var(--accent); font-weight: 500; margin-top: 2px; }
+
+  .timeline-time {
+    font-size: 12px; color: var(--text-3);
+    padding: 4px 14px; background: var(--bg-blue);
+    border: 1px solid rgba(0,82,217,0.10);
+    border-radius: 50px; white-space: nowrap; font-weight: 500;
+  }
+
+  .timeline-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .timeline-tag {
+    padding: 3px 12px; background: var(--bg-blue);
+    border: 1px solid rgba(0,82,217,0.12);
+    border-radius: 50px;
+    font-size: 12px; color: var(--accent); font-weight: 500;
+  }
+
+  .timeline-desc {
+    font-size: 14px; color: var(--text-2);
+    line-height: 1.9; padding-left: 16px;
+    border-left: 3px solid var(--accent);
+  }
+  .timeline-desc li { margin-bottom: 4px; list-style: none; position: relative; padding-left: 16px; }
+  .timeline-desc li::before { content: '\203A'; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+  .timeline-desc .hl { color: var(--accent-lt); font-weight: 700; }
+
+  .sub-projects {
+    margin-top: 20px; padding: 20px 24px;
+    background: var(--bg-blue); border: 1px solid rgba(0,82,217,0.08);
+    border-radius: var(--radius-md);
+  }
+  .sub-projects h5 {
+    font-size: 12px; font-weight: 700; color: var(--text-3);
+    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+  }
+  .sub-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .sub-item {
+    font-size: 13px; color: var(--text-2);
+    padding: 6px 0 6px 14px; position: relative;
+  }
+  .sub-item::before {
+    content: ''; position: absolute; left: 0; top: 50%;
+    width: 5px; height: 5px; background: var(--accent);
+    border-radius: 50%; transform: translateY(-50%);
+  }
+  .sub-item strong { color: var(--text-1); }
+
+  /* ===== HONORS ===== */
+  .honors-list { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  .honor-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 16px 22px;
+    background: var(--bg-white); border: 1px solid var(--border);
+    border-radius: var(--radius-md); font-size: 14px;
+    transition: all 0.3s var(--bounce);
+  }
+  .honor-item:hover {
+    border-color: rgba(0,82,217,0.25);
+    transform: scale(1.02);
+    box-shadow: var(--shadow-sm);
+  }
+  .honor-icon {
+    width: 8px; height: 8px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-lt));
+    border-radius: 50%; flex-shrink: 0;
+  }
+  .honor-item strong { color: var(--text-1); }
+
+  /* ===== BOOK ===== */
+  .book-section {
+    padding: 88px 40px;
+    background: var(--bg-blue);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .book-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; gap: 52px; align-items: center;
+  }
+  .book-visual {
+    width: 220px; flex-shrink: 0;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    transition: transform 0.4s var(--bounce);
+    object-fit: cover;
+  }
+  .book-visual:hover { transform: rotate(-2deg) scale(1.04); }
+
+  .book-content h3 { font-size: 28px; font-weight: 800; margin-bottom: 14px; }
+  .book-content p  { font-size: 15px; color: var(--text-2); line-height: 1.9; margin-bottom: 20px; }
+
+  .book-stats { display: flex; gap: 20px; flex-wrap: wrap; }
+  .book-stat {
+    padding: 14px 22px;
+    background: var(--bg-white); border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: all 0.3s var(--bounce);
+  }
+  .book-stat:hover { border-color: rgba(0,82,217,0.25); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+  .book-stat-num   { font-size: 22px; font-weight: 800; color: var(--accent); font-family: 'Inter', sans-serif; }
+  .book-stat-label { font-size: 12px; color: var(--text-3); margin-top: 2px; }
+
+  /* ===== SKILLS ===== */
+  .skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+  .skill-card {
+    padding: 26px 24px;
+    background: var(--bg-white); border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    transition: all 0.35s var(--bounce);
+    position: relative; overflow: hidden;
+  }
+  .skill-card::after {
+    content: ''; position: absolute;
+    top: -40%; right: -40%; width: 80px; height: 80px;
+    background: radial-gradient(circle, rgba(0,82,217,0.05), transparent);
+    border-radius: 50%; transition: all 0.5s;
+  }
+  .skill-card:hover {
+    border-color: rgba(0,82,217,0.3);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+  }
+  .skill-card:hover::after { transform: scale(3); }
+
+  .skill-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+  .skill-card p  { font-size: 12px; color: var(--text-3); line-height: 1.5; }
+  .skill-badge {
+    display: inline-block; margin-top: 10px;
+    padding: 3px 12px; background: var(--bg-blue);
+    border-radius: 50px; font-size: 11px;
+    color: var(--accent); font-weight: 600;
+  }
+
+  /* ===== GALLERY ===== */
+  .gallery {
+    padding: 88px 40px;
+    background: var(--bg-white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .gallery-inner { max-width: 1100px; margin: 0 auto; }
+  .gallery-grid  { columns: 3; column-gap: 16px; }
+  .gallery-item {
+    break-inside: avoid; margin-bottom: 16px;
+    border-radius: var(--radius-md);
+    overflow: hidden; position: relative;
+    cursor: pointer; transition: all 0.4s var(--bounce);
+    border: 1px solid var(--border);
+    background: var(--bg-white);
+  }
+  .gallery-item:hover {
+    transform: translateY(-6px) scale(1.02);
+    border-color: rgba(0,82,217,0.3);
+    box-shadow: var(--shadow-lg);
+  }
+  .gallery-item img { width: 100%; display: block; transition: transform 0.5s ease; }
+  .gallery-item:hover img { transform: scale(1.04); }
+
+  .gallery-item-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 50%);
+    opacity: 0; transition: opacity 0.3s;
+    display: flex; align-items: flex-end; padding: 14px;
+  }
+  .gallery-item:hover .gallery-item-overlay { opacity: 1; }
+  .gallery-item-caption { font-size: 13px; color: #fff; font-weight: 600; }
+
+  .gallery-item-zoom {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%) scale(0.5);
+    width: 42px; height: 42px;
+    background: var(--accent); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; opacity: 0;
+    transition: all 0.3s var(--bounce); pointer-events: none;
+  }
+  .gallery-item:hover .gallery-item-zoom { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+
+  /* ===== LIGHTBOX ===== */
+  .lightbox {
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(0,0,0,0.92); backdrop-filter: blur(20px);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .lightbox.active { opacity: 1; visibility: visible; }
+  .lightbox-img {
+    max-width: 88vw; max-height: 88vh;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 20px 80px rgba(0,0,0,0.5);
+    transition: transform 0.35s var(--bounce);
+  }
+  .lightbox-close {
+    position: absolute; top: 24px; right: 28px;
+    width: 46px; height: 46px;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%; color: #fff; font-size: 20px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s;
+  }
+  .lightbox-close:hover { background: var(--accent); transform: rotate(90deg); }
+
+  .lightbox-nav {
+    position: absolute; top: 50%;
+    width: 46px; height: 46px;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50%; color: #fff; font-size: 18px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s; transform: translateY(-50%);
+  }
+  .lightbox-nav:hover { background: var(--accent); }
+  .lightbox-prev { left: 24px; }
+  .lightbox-next { right: 24px; }
+  .lightbox-counter {
+    position: absolute; bottom: 28px; left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px; color: #666;
+    font-family: 'Inter', sans-serif; font-weight: 600;
+  }
+
+  /* ===== BRANDS MARQUEE ===== */
+  .brands {
+    padding: 64px 0;
+    background: var(--bg-white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .brands-label {
+    text-align: center;
+    font-size: 13px; font-weight: 600;
+    color: var(--text-3); letter-spacing: 1.5px;
+    margin-bottom: 32px;
+  }
+  .brands-track {
+    display: flex;
+    animation: marquee 30s linear infinite;
+    width: max-content;
+  }
+  .brands-track:hover { animation-play-state: paused; }
+  .brands-track-inner { display: flex; gap: 32px; padding: 0 16px; }
+
+  .brand-card {
+    flex-shrink: 0;
+    width: 180px; height: 80px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 6px;
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 12px 20px;
+    transition: all 0.35s var(--bounce);
+    cursor: default;
+  }
+  .brand-card:hover {
+    border-color: rgba(0,82,217,0.3);
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: var(--shadow-md);
+  }
+  .brand-card-icon {
+    font-size: 22px;
+    line-height: 1;
+  }
+  .brand-card-name {
+    font-size: 13px; font-weight: 700;
+    color: var(--text-2);
+    white-space: nowrap;
+  }
+
+  @keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ===== STORES MARQUEE ===== */
+.stores {
+  padding: 72px 0 64px;
+  background: var(--bg-blue);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.stores-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+.stores-header .section-label {
+  justify-content: center;
+}
+.stores-header .section-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.stores-header .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.stores-header .section-desc {
+  margin: 8px auto 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-3);
+  max-width: 500px;
+}
+
+.store-row {
+  display: flex;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+.store-row:last-child { margin-bottom: 0; }
+
+.store-track {
+  display: flex;
+  animation: marquee 45s linear infinite;
+  width: max-content;
+}
+.store-track-reverse {
+  animation: marquee-reverse 45s linear infinite;
+}
+.store-track:hover,
+.store-track-reverse:hover {
+  animation-play-state: paused;
+}
+
+.store-tag {
+  flex-shrink: 0;
+  padding: 9px 20px;
+  margin: 0 7px;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-2);
+  white-space: nowrap;
+  transition: all 0.35s var(--bounce);
+  cursor: default;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.store-tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 6px 20px rgba(0,82,217,0.12);
+}
+
+@keyframes marquee-reverse {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.stores-screenshots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 960px;
+  margin: 32px auto 0;
+  padding: 0 20px;
+}
+.store-screenshot {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-white);
+  cursor: pointer;
+  transition: all 0.35s var(--bounce);
+  position: relative;
+}
+.store-screenshot:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+.store-screenshot img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.store-screenshot-label {
+  text-align: center;
+  padding: 10px 8px;
+  font-size: 12px;
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .stores-screenshots { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .store-screenshot img { height: 160px; }
+  .store-tag { padding: 7px 14px; font-size: 12px; margin: 0 4px; }
+  .stores-header .section-title { font-size: 22px; }
+}
+
+/* ===== CONTACT ===== */
+  .contact {
+    padding: 88px 40px;
+    background: linear-gradient(165deg, var(--bg-blue) 0%, var(--bg-page) 100%);
+    border-top: 1px solid var(--border);
+  }
+  .contact-inner {
+    max-width: 700px; margin: 0 auto; text-align: center;
+  }
+  .contact h2 { font-size: 32px; font-weight: 800; margin-bottom: 14px; }
+  .contact .section-desc { margin: 0 auto 40px; text-align: center; }
+
+  .contact-cards { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+
+  .contact-card {
+    display: flex; align-items: center; gap: 16px;
+    padding: 24px 32px;
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    transition: all 0.35s var(--bounce);
+    text-decoration: none; color: var(--text-1);
+  }
+  .contact-card:hover {
+    border-color: rgba(0,82,217,0.3);
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: var(--shadow-lg);
+  }
+  .contact-icon {
+    width: 50px; height: 50px;
+    background: var(--bg-blue);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+    transition: transform 0.3s var(--bounce);
+  }
+  .contact-card:hover .contact-icon { transform: rotate(-8deg) scale(1.1); }
+  .contact-card-text { text-align: left; }
+  .contact-card-label { font-size: 12px; color: var(--text-3); font-weight: 500; }
+  .contact-card-value { font-size: 18px; font-weight: 800; color: var(--accent); font-family: 'Inter', sans-serif; letter-spacing: 0.5px; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    padding: 44px 40px; text-align: center;
+    border-top: 1px solid var(--border);
+    font-size: 13px; color: var(--text-3);
+    background: var(--bg-white);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 768px) {
+    nav { padding: 10px 18px; gap: 16px; }
+    .nav-links { display: none; }
+    .hero { padding: 100px 20px 60px; }
+    .hero h1 { font-size: 32px; }
+    .hero .subtitle { font-size: 15px; }
+    .stats-grid  { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .stat-num     { font-size: 26px; }
+    .section      { padding: 60px 20px; }
+    .section-title { font-size: 26px; }
+    .about-grid   { grid-template-columns: 1fr; gap: 32px; }
+    .about-left    { align-items: center; }
+    .about-photo-wrapper { width: 160px; height: 210px; }
+    .skills-grid  { grid-template-columns: 1fr 1fr; }
+    .honors-list  { grid-template-columns: 1fr; }
+    .book-inner   { flex-direction: column; text-align: center; gap: 32px; }
+    .book-visual  { width: 160px; }
+    .sub-grid     { grid-template-columns: 1fr; }
+    .timeline      { padding-left: 28px; }
+    .timeline-item::before { left: -21px; }
+    .timeline-header { flex-direction: column; }
+    .hero-tags   { gap: 6px; }
+    .hero-tag    { font-size: 12px; padding: 4px 10px; }
+    .gallery      { padding: 60px 16px; }
+    .gallery-grid { columns: 2; column-gap: 10px; }
+    .gallery-item { margin-bottom: 10px; border-radius: 14px; }
+    .lightbox-prev { left: 10px; }
+    .lightbox-next { right: 10px; }
+    .brand-card { width: 140px; height: 68px; }
+    .contact { padding: 60px 20px; }
+    .contact-cards { flex-direction: column; align-items: center; }
+    .contact-card { width: 100%; max-width: 340px; justify-content: center; text-align: center; }
+    .contact-card-text { text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="navbar">
+  <div class="nav-logo">WANG<span>.</span>REN</div>
+  <ul class="nav-links">
+    <li><a href="#about">关于我</a></li>
+    <li><a href="#experience">经历</a></li>
+    <li><a href="#book">著作</a></li>
+    <li><a href="#stores">门店</a></li>
+    <li><a href="#gallery">战绩</a></li>
+    <li><a href="#skills">能力</a></li>
+    <li><a href="#contact">联系</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <span class="hero-deco">&#128640;</span>
+  <span class="hero-deco">&#9889;</span>
+  <span class="hero-deco">&#127775;</span>
+  <span class="hero-deco">&#128293;</span>
+  <div class="hero-content">
+    <div class="hero-badge">8年实战，不打虚的</div>
+    <h1>跨品类的<br><span class="gradient-text">抖音操盘手</span></h1>
+    <p class="subtitle">从淘宝到抖音，电商+本地生活双赛道通关。8个以上行业从0到1起盘验证，90%自然流硬核打法，300页专著作者。简单说：实战型选手，数据说话。</p>
+    <div class="hero-tags">
+      <span class="hero-tag">&#9889; 抖音电商</span>
+      <span class="hero-tag">&#127963; 本地生活</span>
+      <span class="hero-tag">&#128250; 直播体系搭建</span>
+      <span class="hero-tag">&#127919; 品牌全案运营</span>
+      <span class="hero-tag">&#128293; 自然流打法</span>
+      <span class="hero-tag">&#128214; 内容体系建设</span>
+    </div>
+    <a href="#experience" class="hero-cta">看战绩 &#8595;</a>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-num" data-target="900" data-suffix="万">0</div>
+      <div class="stat-label">洽洽瓜子<br>半年GMV（从零）</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" data-target="600" data-suffix="万+">0</div>
+      <div class="stat-label">金仕堡7个月<br>线上核销金额</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" data-target="5000" data-suffix="万">0</div>
+      <div class="stat-label">带动线下<br>成交金额</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" data-target="10" data-suffix="万+">0</div>
+      <div class="stat-label">健燃星<br>精准获客</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" data-target="1" data-suffix="万+">0</div>
+      <div class="stat-label">《抖音实战方法论》<br>实体书销量</div>
+    </div>
+  </div>
+</section>
+
+<!-- Brands Marquee -->
+<section class="brands">
+  <div class="brands-label">TRUSTED BY LEADING BRANDS</div>
+  <div class="brands-track">
+    <div class="brands-track-inner">
+      <div class="brand-card">
+        <span class="brand-card-icon">&#129472;</span>
+        <span class="brand-card-name">洽洽瓜子</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#127947;</span>
+        <span class="brand-card-name">金仕堡健身</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#128170;</span>
+        <span class="brand-card-name">零距离健身</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#127959;</span>
+        <span class="brand-card-name">中体盛世</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#127915;</span>
+        <span class="brand-card-name">爱石湾游乐场</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#127973;</span>
+        <span class="brand-card-name">广瑞医疗体检</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#128663;</span>
+        <span class="brand-card-name">精一门贴膜</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#128656;</span>
+        <span class="brand-card-name">吉膜车衣</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#128588;</span>
+        <span class="brand-card-name">静源瑜伽</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#129336;</span>
+        <span class="brand-card-name">FOX瑜伽</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#127831;</span>
+        <span class="brand-card-name">符离集烧鸡</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#128187;</span>
+        <span class="brand-card-name">瑶海家具</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#127973;</span>
+        <span class="brand-card-name">康普沃医疗</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#128293;</span>
+        <span class="brand-card-name">健燃星</span>
+      </div>
+    </div>
+    <!-- Duplicate for seamless loop -->
+    <div class="brands-track-inner">
+      <div class="brand-card">
+        <span class="brand-card-icon">&#129472;</span>
+        <span class="brand-card-name">洽洽瓜子</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#127947;</span>
+        <span class="brand-card-name">金仕堡健身</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#128170;</span>
+        <span class="brand-card-name">零距离健身</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#127959;</span>
+        <span class="brand-card-name">中体盛世</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#127915;</span>
+        <span class="brand-card-name">爱石湾游乐场</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#127973;</span>
+        <span class="brand-card-name">广瑞医疗体检</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#128663;</span>
+        <span class="brand-card-name">精一门贴膜</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#128656;</span>
+        <span class="brand-card-name">吉膜车衣</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#128588;</span>
+        <span class="brand-card-name">静源瑜伽</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#129336;</span>
+        <span class="brand-card-name">FOX瑜伽</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#127831;</span>
+        <span class="brand-card-name">符离集烧鸡</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#128187;</span>
+        <span class="brand-card-name">瑶海家具</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#127973;</span>
+        <span class="brand-card-name">康普沃医疗</span>
+      </div>
+      <div class="brand-card">
+        <span class="brand-card-icon">&#128293;</span>
+        <span class="brand-card-name">健燃星</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stores -->
+<section class="stores" id="stores">
+  <div class="stores-header">
+    <div class="section-label">COOPERATING STORES &#127970;</div>
+    <h2 class="section-title">合作门店</h2>
+    <p class="section-desc">累计合作 200+ 实体门店，覆盖健身、瑜伽两大品类，横跨全国十余个城市</p>
+  </div>
+  <div class="store-row">
+    <div class="store-track">
+      <span class="store-tag">&#127947; 华酷健身</span>
+      <span class="store-tag">&#127947; 即塑健身</span>
+      <span class="store-tag">&#127947; 菲乐健身</span>
+      <span class="store-tag">&#127947; 葡萄鸭健身</span>
+      <span class="store-tag">&#127947; AN健身</span>
+      <span class="store-tag">&#127947; 柒叁叁健身</span>
+      <span class="store-tag">&#127947; 供亿游泳健身</span>
+      <span class="store-tag">&#127947; 珈量健身</span>
+      <span class="store-tag">&#127947; 悦动健身</span>
+      <span class="store-tag">&#127947; Yi美健身</span>
+      <span class="store-tag">&#127947; 供亿美域健身</span>
+      <span class="store-tag">&#127947; 星冉健身</span>
+      <span class="store-tag">&#127947; 轻享健身</span>
+      <span class="store-tag">&#127947; 百瑞健身</span>
+      <span class="store-tag">&#127947; 趣优健身</span>
+      <span class="store-tag">&#127947; 风云健身</span>
+      <span class="store-tag">&#127947; why健身</span>
+      <span class="store-tag">&#127947; 自由健身</span>
+      <span class="store-tag">&#127947; 平头哥健身</span>
+      <span class="store-tag">&#127947; 新维斯特健身</span>
+      <span class="store-tag">&#127947; 铂力游泳健身</span>
+      <span class="store-tag">&#127947; 力德士健身</span>
+      <span class="store-tag">&#127947; 青丘健身</span>
+      <span class="store-tag">&#127947; 悦菲特健身</span>
+      <span class="store-tag">&#127947; 一小时健身</span>
+      <!-- duplicate for seamless loop -->
+      <span class="store-tag">&#127947; 华酷健身</span>
+      <span class="store-tag">&#127947; 即塑健身</span>
+      <span class="store-tag">&#127947; 菲乐健身</span>
+      <span class="store-tag">&#127947; 葡萄鸭健身</span>
+      <span class="store-tag">&#127947; AN健身</span>
+      <span class="store-tag">&#127947; 柒叁叁健身</span>
+      <span class="store-tag">&#127947; 供亿游泳健身</span>
+      <span class="store-tag">&#127947; 珈量健身</span>
+      <span class="store-tag">&#127947; 悦动健身</span>
+      <span class="store-tag">&#127947; Yi美健身</span>
+      <span class="store-tag">&#127947; 供亿美域健身</span>
+      <span class="store-tag">&#127947; 星冉健身</span>
+      <span class="store-tag">&#127947; 轻享健身</span>
+      <span class="store-tag">&#127947; 百瑞健身</span>
+      <span class="store-tag">&#127947; 趣优健身</span>
+      <span class="store-tag">&#127947; 风云健身</span>
+      <span class="store-tag">&#127947; why健身</span>
+      <span class="store-tag">&#127947; 自由健身</span>
+      <span class="store-tag">&#127947; 平头哥健身</span>
+      <span class="store-tag">&#127947; 新维斯特健身</span>
+      <span class="store-tag">&#127947; 铂力游泳健身</span>
+      <span class="store-tag">&#127947; 力德士健身</span>
+      <span class="store-tag">&#127947; 青丘健身</span>
+      <span class="store-tag">&#127947; 悦菲特健身</span>
+      <span class="store-tag">&#127947; 一小时健身</span>
+    </div>
+  </div>
+  <div class="store-row">
+    <div class="store-track store-track-reverse">
+      <span class="store-tag">&#129336; 静馨普拉提</span>
+      <span class="store-tag">&#129336; 露露瑜伽</span>
+      <span class="store-tag">&#129336; 渡凡瑜伽</span>
+      <span class="store-tag">&#129336; 塑形瑜伽</span>
+      <span class="store-tag">&#129336; 芯雅瑜伽</span>
+      <span class="store-tag">&#129336; 张旻瑜伽</span>
+      <span class="store-tag">&#129336; 源瑜伽</span>
+      <span class="store-tag">&#129336; 悦兰瑜伽</span>
+      <span class="store-tag">&#129336; 一席瑜伽</span>
+      <span class="store-tag">&#129336; 梵谛瑜伽</span>
+      <span class="store-tag">&#129336; Fox瑜伽</span>
+      <span class="store-tag">&#129336; 纳瑜伽</span>
+      <span class="store-tag">&#129336; 兴意心瑜伽</span>
+      <span class="store-tag">&#129336; 屿你瑜伽</span>
+      <span class="store-tag">&#129336; 枫墨瑜伽</span>
+      <span class="store-tag">&#129336; 开心果瑜伽</span>
+      <span class="store-tag">&#129336; 丹禾瑜伽</span>
+      <span class="store-tag">&#129336; U瑜伽</span>
+      <span class="store-tag">&#129336; 梵晨瑜伽</span>
+      <span class="store-tag">&#129336; 沐可瑜伽</span>
+      <span class="store-tag">&#129336; 梵静瑜伽</span>
+      <span class="store-tag">&#129336; 菁蔚瑜伽</span>
+      <span class="store-tag">&#129336; 轻瑜伽</span>
+      <!-- duplicate for seamless loop -->
+      <span class="store-tag">&#129336; 静馨普拉提</span>
+      <span class="store-tag">&#129336; 露露瑜伽</span>
+      <span class="store-tag">&#129336; 渡凡瑜伽</span>
+      <span class="store-tag">&#129336; 塑形瑜伽</span>
+      <span class="store-tag">&#129336; 芯雅瑜伽</span>
+      <span class="store-tag">&#129336; 张旻瑜伽</span>
+      <span class="store-tag">&#129336; 源瑜伽</span>
+      <span class="store-tag">&#129336; 悦兰瑜伽</span>
+      <span class="store-tag">&#129336; 一席瑜伽</span>
+      <span class="store-tag">&#129336; 梵谛瑜伽</span>
+      <span class="store-tag">&#129336; Fox瑜伽</span>
+      <span class="store-tag">&#129336; 纳瑜伽</span>
+      <span class="store-tag">&#129336; 兴意心瑜伽</span>
+      <span class="store-tag">&#129336; 屿你瑜伽</span>
+      <span class="store-tag">&#129336; 枫墨瑜伽</span>
+      <span class="store-tag">&#129336; 开心果瑜伽</span>
+      <span class="store-tag">&#129336; 丹禾瑜伽</span>
+      <span class="store-tag">&#129336; U瑜伽</span>
+      <span class="store-tag">&#129336; 梵晨瑜伽</span>
+      <span class="store-tag">&#129336; 沐可瑜伽</span>
+      <span class="store-tag">&#129336; 梵静瑜伽</span>
+      <span class="store-tag">&#129336; 菁蔚瑜伽</span>
+      <span class="store-tag">&#129336; 轻瑜伽</span>
+    </div>
+  </div>
+  <div class="stores-screenshots">
+    <div class="store-screenshot" onclick="openLightbox('assets/stores-1.png')">
+      <img src="assets/stores-1.png" alt="合作门店群聊截图1" loading="lazy">
+      <div class="store-screenshot-label">合作门店群（1/4）</div>
+    </div>
+    <div class="store-screenshot" onclick="openLightbox('assets/stores-2.png')">
+      <img src="assets/stores-2.png" alt="合作门店群聊截图2" loading="lazy">
+      <div class="store-screenshot-label">合作门店群（2/4）</div>
+    </div>
+    <div class="store-screenshot" onclick="openLightbox('assets/stores-3.png')">
+      <img src="assets/stores-3.png" alt="合作门店群聊截图3" loading="lazy">
+      <div class="store-screenshot-label">合作门店群（3/4）</div>
+    </div>
+    <div class="store-screenshot" onclick="openLightbox('assets/stores-4.png')">
+      <img src="assets/stores-4.png" alt="合作门店群聊截图4" loading="lazy">
+      <div class="store-screenshot-label">合作门店群（4/4）</div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery" id="gallery">
+  <div class="gallery-inner">
+    <div class="section-label">PROFFS &#128247;</div>
+    <h2 class="section-title">战绩实拍</h2>
+    <p class="section-desc">部分操盘案例后台数据、直播间截图、获奖留影。点击图片可放大查看。</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="assets/战绩/314eb5870cb30e8217b1c57addf94eaf.jpg" alt="战绩截图1" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">洽洽瓜子直播间后台</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/422037557b3d1920ee006baca7d9f431.jpg" alt="战绩截图2" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">金仕堡核销数据</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/4a098b31bc8a92c2487b9dbdefc30338.jpg" alt="战绩截图3" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">直播实时大屏</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/54f827af3cf20d36f488c43ac812d1bd.jpg" alt="战绩截图4" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">GMV数据战报</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/729b2057217f92145409394c61830d2c.jpg" alt="战绩截图5" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">到店核销截图</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/7796cb31032e3dec80cd9b220c304865.jpg" alt="战绩截图6" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">抖音峰会现场</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/7f608b9210b4da51f69b3baba1239e12.jpg" alt="战绩截图7" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">自然流在线数据</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/812a490bc1589499ed7beae291c2386b.jpg" alt="战绩截图8" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">门店获客后台</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/819d2082611dce3ee57d0533d3adf109.jpg" alt="战绩截图9" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">达人分销数据</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/82acf0f8a588069d37675d9e3b867177.jpg" alt="战绩截图10" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">获奖证书</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/8d4e4539cfa40a93a9fc1e7881de7feb.jpg" alt="战绩截图11" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">云连锁后台</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/c8e886ebe4b30edb88e15462851bce52.png" alt="战绩截图12" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">行业分享现场</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/d07b81f2d33fb5cfe262c015b59a8d0b.jpg" alt="战绩截图13" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">专著《抖音实战方法论》</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <!-- 新增：喜报 + 直播实景 + 行业演讲 -->
+      <div class="gallery-item">
+        <img src="assets/战绩/8be6cd3b4c37a29f9861c86458042902.jpg" alt="金仕堡健身喜报" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">金仕堡健身 — 2023年线上获客45000人次，业绩突破730万</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/5b44cce039bab4b4928bfceead2ab571.jpg" alt="JEM吉膜车衣直播" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">JEM吉膜隐形车衣 — 车行直播间实操现场</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/d195a338a844b4655807bfbc698f6a09.jpg" alt="零距离健身喜报" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">济南零距离健身 — 20天销售50万，获客4000+人</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/a645ae0164991bbb8faad85efe4fdef3.jpg" alt="FOX瑜伽喜报" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">太原FOX瑜伽 — 6个月获客3000人次，业绩66万</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/6223a2352d6c329a358ab302cfb4af60.jpg" alt="零距离游泳健身直播" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">中壹零距离游泳健身 — 抖音直播间实况</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/a66960c4946e80718da621cb9a97f24c.jpg" alt="行业演讲分享" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">行业峰会演讲 — "什么是优质主播"主题分享</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/战绩/1b09404e65ad97c5e01ec1026d70a162.jpg" alt="合肥金仕堡直播间" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-caption">合肥金仕堡健身 — 抖音直播间实况</span></div>
+        <div class="gallery-item-zoom">&#128269;</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="section-label">ABOUT ME &#128075;</div>
+  <h2 class="section-title">关于我</h2>
+  <p class="section-desc">8年摸爬滚打，从淘宝小卖家到抖音操盘手，踩过的坑比写过的方案还多。</p>
+  <div class="about-grid">
+    <div class="about-left">
+      <div class="about-photo-wrapper">
+        <img src="assets/profile.jpg" alt="王任" class="about-photo">
+      </div>
+      <div class="about-text">
+      <p>
+        2017年从淘宝起步，操盘品牌<strong>康普沃</strong>深耕医疗器械等细分赛道，直接干到<strong>淘宝、京东、拼多多多平台类目第一</strong>。2021年杀入抖音电商，操盘洽洽瓜子直播+达人分销<strong>半年从零做到900万GMV</strong>，<strong>90%全是自然流</strong>，新号3天在线破3500人，没花一分钱投流。
+      </p>
+      <p style="margin-top:16px">
+        2022年扎进本地生活，操盘金仕堡健身干到<strong>华中地区健身本地生活第一名</strong>。单月300万自然流，线上核销600万+。同期还操盘了<strong>瑜伽、体检、车衣、游乐场等8+行业</strong>，累计给门店精准获客超10万人。
+      </p>
+      <p style="margin-top:16px">
+        后来把自己踩过的坑和打法写成了《抖音实战方法论》，300页，印了1万多册，基本卖完。本地达人资源1万+，帮3000+商家搞定了线上获客这件事。
+      </p>
+    </div>
+    </div>
+    <div class="about-highlights">
+      <div class="highlight-card">
+        <div class="highlight-icon">&#9889;</div>
+        <div>
+          <h4>自然流直播专家</h4>
+          <p>单场直播纯自然流在线破万人，半年900万GMV从零起盘，90%为自然流量</p>
+        </div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">&#127919;</div>
+        <div>
+          <h4>跨品类验证能力</h4>
+          <p>从医疗器械到洽洽瓜子、从健身到体检、从车衣到游乐场，8+品类全部打出硬数据</p>
+        </div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">&#128218;</div>
+        <div>
+          <h4>体系化输出能力</h4>
+          <p>独立撰写300页行业专著，1万册实体售罄，行业方法论体系化沉淀</p>
+        </div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">&#128101;</div>
+        <div>
+          <h4>全链路操盘经验</h4>
+          <p>电商+本地生活双赛道，选品、投流、直播、内容、达人、私域全链路打通</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Honors -->
+<section class="section" style="padding-top: 40px;">
+  <div class="section-label">MVP MOMENTS &#127942;</div>
+  <h2 class="section-title" style="font-size: 28px; margin-bottom: 32px;">高光时刻</h2>
+  <div class="honors-list">
+    <div class="honor-item">
+      <div class="honor-icon"></div>
+      <span><strong>华中地区健身本地生活第一名</strong></span>
+    </div>
+    <div class="honor-item">
+      <div class="honor-icon"></div>
+      <span><strong>全国抖音大赛标杆</strong>，被抖音官方邀请</span>
+    </div>
+    <div class="honor-item">
+      <div class="honor-icon"></div>
+      <span>多次标杆参加<strong>抖音峰会及行业分享</strong></span>
+    </div>
+    <div class="honor-item">
+      <div class="honor-icon"></div>
+      <span><strong>多行业本地生活冠军操盘手</strong></span>
+    </div>
+    <div class="honor-item">
+      <div class="honor-icon"></div>
+      <span><strong>费奥斯商学院</strong> 抖音讲师</span>
+    </div>
+    <div class="honor-item">
+      <div class="honor-icon"></div>
+      <span>助力<strong>3000+商家</strong>解决营销获客</span>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section class="section" id="experience" style="max-width: 900px;">
+  <div class="section-label">MY JOURNEY &#128640;</div>
+  <h2 class="section-title">核心经历</h2>
+  <p class="section-desc">每一步都有数据，不画饼。</p>
+
+  <div class="timeline">
+    <!-- 健燃星 -->
+    <div class="timeline-item current">
+      <div class="timeline-header">
+        <div>
+          <div class="timeline-company">健燃星</div>
+          <div class="timeline-role">创始人 / 总操盘手</div>
+        </div>
+        <span class="timeline-time">2024.05 - 至今</span>
+      </div>
+      <div class="timeline-tags">
+        <span class="timeline-tag">10万+精准获客</span>
+        <span class="timeline-tag">云连锁品牌</span>
+        <span class="timeline-tag">5人团队</span>
+      </div>
+      <ul class="timeline-desc">
+        <li>独立创建抖音本地生活云连锁品牌，搭建从品牌注册、门店招商拓展到线上获客的全链路体系</li>
+        <li>累计为合作门店精准获客<span class="hl">超10万人</span>，建立标准化直播带货体系，每场成交5万+，同城曝光20万+</li>
+      </ul>
+    </div>
+
+    <!-- 鑫娱传媒 -->
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <div>
+          <div class="timeline-company">韵元传媒</div>
+          <div class="timeline-role">运营总监 / 总操盘手</div>
+        </div>
+        <span class="timeline-time">2022.08 - 2024.05</span>
+      </div>
+      <div class="timeline-tags">
+        <span class="timeline-tag">单月300万自然流</span>
+        <span class="timeline-tag">华中第一</span>
+        <span class="timeline-tag">线上核销600万+</span>
+      </div>
+      <ul class="timeline-desc">
+        <li>担任总运营操盘手，统筹抖音本地生活全链路运营，被抖音官方作为标杆邀请参加全国抖音大赛及峰会</li>
+        <li>金仕堡健身全案：单月来客<span class="hl">300万自然流</span>，核销率60%，线上核销<span class="hl">600万+</span>，华中地区健身本地生活<strong>第一名</strong></li>
+      </ul>
+      <div class="sub-projects">
+        <h5>同期操盘项目</h5>
+        <div class="sub-grid">
+          <div class="sub-item">南京静源瑜伽 — 核销<strong>100万</strong></div>
+          <div class="sub-item">济南零距离健身 — 客资<strong>10000人</strong>，济南TOP1</div>
+          <div class="sub-item">北京中体盛世 — 获客<strong>12000+</strong>人</div>
+          <div class="sub-item">合肥爱石湾 — 自然流到店<strong>10000+</strong>人</div>
+          <div class="sub-item">广瑞医疗体检 — 线上<strong>30万+</strong></div>
+          <div class="sub-item">精一门贴膜 — 在线<strong>10000+</strong>人</div>
+          <div class="sub-item">吉膜车衣 — <strong>1200+门店</strong>全域运营</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 北京荷马 -->
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <div>
+          <div class="timeline-company">北京荷马健康管理</div>
+          <div class="timeline-role">新媒体运营 / 总运营</div>
+        </div>
+        <span class="timeline-time">2021.06 - 2022.04</span>
+      </div>
+      <div class="timeline-tags">
+        <span class="timeline-tag">半年900万GMV（从零）</span>
+        <span class="timeline-tag">90%自然流</span>
+        <span class="timeline-tag">新号3天在线3500人</span>
+      </div>
+      <ul class="timeline-desc">
+        <li>负责直播间优化提升人货场转化，新号3天在线破<span class="hl">3500人</span>，纯自然流；半个月在线破千，一小时破万</li>
+        <li>操盘洽洽瓜子直播+达人分销，<span class="hl">半年从零做到900万</span>，<span class="hl">90%纯自然流</span>；同时操盘百雀羚、符离集烧鸡等品牌抖音业务</li>
+      </ul>
+    </div>
+
+    <!-- 电商创业 -->
+    <div class="timeline-item">
+      <div class="timeline-header">
+        <div>
+          <div class="timeline-company">电商创业 · 淘宝 / 京东 / 拼多多</div>
+          <div class="timeline-role">类目运营 / 创始人</div>
+        </div>
+        <span class="timeline-time">2017 - 2021</span>
+      </div>
+      <ul class="timeline-desc">
+        <li>电商运营起点，深耕医疗器械等细分赛道，在<strong>淘宝、京东、拼多多多平台均做到细分类目第一</strong></li>
+        <li>2017年创办韵元传媒，从互联网首批直播公司梯队发展至今</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Book -->
+<section class="book-section" id="book">
+  <div class="book-inner">
+    <img src="assets/book-cover.jpg" class="book-visual" alt="《抖音实战方法论》封面">
+    <div class="book-content">
+      <div class="section-label">MY BOOK &#128216;</div>
+      <h3>《抖音实战方法论》</h3>
+      <p style="font-size:14px;color:var(--text-muted);margin-bottom:12px;">吴天鹏 著作&nbsp;&nbsp;&middot;&nbsp;&nbsp;王任、马东 编著</p>
+      <p>把8年踩过的坑和验证过的打法写进了这本书，约300页。涵盖商家获客策略、团购产品设计、直播体系搭建、内容运营、达人分销、私域转化全套方法论。印了1万多册基本卖完，算是对行业的一点小贡献。</p>
+      <div class="book-stats">
+        <div class="book-stat">
+          <div class="book-stat-num">~300</div>
+          <div class="book-stat-label">页体系化方法论</div>
+        </div>
+        <div class="book-stat">
+          <div class="book-stat-num">1万+</div>
+          <div class="book-stat-label">册实体售罄</div>
+        </div>
+        <div class="book-stat">
+          <div class="book-stat-num">3000+</div>
+          <div class="book-stat-label">商家培训受益</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&#10005;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&#10094;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="战绩大图">
+  <button class="lightbox-nav lightbox-next" id="lightboxNext">&#10095;</button>
+  <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
+<!-- Skills -->
+<section class="section" id="skills">
+  <div class="section-label">SKILL POINTS &#127775;</div>
+  <h2 class="section-title">核心能力</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h4>抖音本地生活运营</h4>
+      <p>团购产品设计、门店线上获客、核销转化优化、连锁品牌全案</p>
+      <span class="skill-badge">华中第一验证</span>
+    </div>
+    <div class="skill-card">
+      <h4>抖音电商运营</h4>
+      <p>直播间人货场优化、自然流打法、达人分销、品牌电商全链路</p>
+      <span class="skill-badge">半年900万GMV（从零）</span>
+    </div>
+    <div class="skill-card">
+      <h4>自然流直播</h4>
+      <p>新号起号、直播间场景搭建、主播培训、话术优化、实时数据调整</p>
+      <span class="skill-badge">在线万人级</span>
+    </div>
+    <div class="skill-card">
+      <h4>从0到1起盘</h4>
+      <p>品牌创建、团队搭建、运营体系搭建、SOP标准化、规模化复制</p>
+      <span class="skill-badge">8+品类验证</span>
+    </div>
+    <div class="skill-card">
+      <h4>达人资源整合</h4>
+      <p>本地达人BD、达人分销体系搭建、达人内容种草、KOL矩阵管理</p>
+      <span class="skill-badge">1万+合作达人</span>
+    </div>
+    <div class="skill-card">
+      <h4>内容体系建设</h4>
+      <p>短视频内容策划、账号定位、内容栏目规划、爆款方法论</p>
+      <span class="skill-badge">行业专著作者</span>
+    </div>
+    <div class="skill-card">
+      <h4>投流与数据分析</h4>
+      <p>ROI优化、人群包策略、自然流提升、全链路数据复盘</p>
+      <span class="skill-badge">90%自然流模型</span>
+    </div>
+    <div class="skill-card">
+      <h4>团队管理与培训</h4>
+      <p>5人以上团队管理、主播培训、运营SOP、商学院授课</p>
+      <span class="skill-badge">8年创业实战</span>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="section-label" style="justify-content:center;">GET IN TOUCH &#9993;</div>
+    <h2>聊聊合作</h2>
+    <p class="section-desc">无论品牌全案、直播操盘、还是本地生活获客，欢迎随时联系。先聊聊，不亏。</p>
+    <div class="contact-cards">
+      <a href="tel:13085047155" class="contact-card">
+        <div class="contact-icon">&#128222;</div>
+        <div class="contact-card-text">
+          <div class="contact-card-label">电话 / 微信同号</div>
+          <div class="contact-card-value">130 8504 7155</div>
+        </div>
+      </a>
+      <a href="weixin://dl/chat?13085047155" class="contact-card">
+        <div class="contact-icon">&#128172;</div>
+        <div class="contact-card-text">
+          <div class="contact-card-label">微信扫码或搜索</div>
+          <div class="contact-card-value">13085047155</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2026 Wang Ren &mdash; Built with purpose & a lot of coffee &#9749;</p>
+</footer>
+
+<script>
+// Counter animation for stats
+const statNums = document.querySelectorAll('.stat-num[data-target]');
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.dataset.animated) {
+      entry.target.dataset.animated = 'true';
+      const target = parseInt(entry.target.dataset.target);
+      const suffix = entry.target.dataset.suffix || '';
+      const duration = 2000;
+      const start = performance.now();
+
+      function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease out cubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(eased * target);
+        entry.target.textContent = current + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+  });
+}, { threshold: 0.5 });
+
+statNums.forEach(el => counterObserver.observe(el));
+
+// Navbar scroll effect
+window.addEventListener('scroll', function() {
+  const nav = document.getElementById('navbar');
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
+// Scroll reveal animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.stat-card, .highlight-card, .timeline-item, .skill-card, .honor-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(24px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+// Lightbox
+(function(){
+  const imgs = [
+    'assets/战绩/314eb5870cb30e8217b1c57addf94eaf.jpg',
+    'assets/战绩/422037557b3d1920ee006baca7d9f431.jpg',
+    'assets/战绩/4a098b31bc8a92c2487b9dbdefc30338.jpg',
+    'assets/战绩/54f827af3cf20d36f488c43ac812d1bd.jpg',
+    'assets/战绩/729b2057217f92145409394c61830d2c.jpg',
+    'assets/战绩/7796cb31032e3dec80cd9b220c304865.jpg',
+    'assets/战绩/7f608b9210b4da51f69b3baba1239e12.jpg',
+    'assets/战绩/812a490bc1589499ed7beae291c2386b.jpg',
+    'assets/战绩/819d2082611dce3ee57d0533d3adf109.jpg',
+    'assets/战绩/82acf0f8a588069d37675d9e3b867177.jpg',
+    'assets/战绩/8d4e4539cfa40a93a9fc1e7881de7feb.jpg',
+    'assets/战绩/c8e886ebe4b30edb88e15462851bce52.png',
+    'assets/战绩/d07b81f2d33fb5cfe262c015b59a8d0b.jpg',
+    'assets/战绩/8be6cd3b4c37a29f9861c86458042902.jpg',
+    'assets/战绩/5b44cce039bab4b4928bfceead2ab571.jpg',
+    'assets/战绩/d195a338a844b4655807bfbc698f6a09.jpg',
+    'assets/战绩/a645ae0164991bbb8faad85efe4fdef3.jpg',
+    'assets/战绩/6223a2352d6c329a358ab302cfb4af60.jpg',
+    'assets/战绩/a66960c4946e80718da621cb9a97f24c.jpg',
+    'assets/战绩/1b09404e65ad97c5e01ec1026d70a162.jpg',
+  ];
+  let current = 0;
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightboxImg');
+  const lbCounter = document.getElementById('lightboxCounter');
+
+  function show(idx) {
+    current = (idx + imgs.length) % imgs.length;
+    lbImg.src = imgs[current];
+    lbCounter.textContent = (current + 1) + ' / ' + imgs.length;
+  }
+
+  function openLightbox(src) {
+    lbImg.src = src;
+    lbCounter.textContent = '';
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  document.querySelectorAll('.gallery-item').forEach((el, i) => {
+    el.addEventListener('click', function(){
+      show(i);
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  document.getElementById('lightboxClose').addEventListener('click', function(){
+    lb.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+
+  lb.addEventListener('click', function(e){
+    if (e.target === lb) {
+      lb.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+
+  document.getElementById('lightboxPrev').addEventListener('click', function(e){
+    e.stopPropagation();
+    show(current - 1);
+  });
+
+  document.getElementById('lightboxNext').addEventListener('click', function(e){
+    e.stopPropagation();
+    show(current + 1);
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (!lb.classList.contains('active')) return;
+    if (e.key === 'Escape') { lb.classList.remove('active'); document.body.style.overflow = ''; }
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+})();
+</script>
+
+</body>
+</html>
