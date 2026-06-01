@@ -1715,6 +1715,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     lb.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
+  // 暴露到全局供 onclick 调用
+  window.openLightbox = openLightbox;
 
   document.querySelectorAll('.gallery-item').forEach((el, i) => {
     el.addEventListener('click', function(){
